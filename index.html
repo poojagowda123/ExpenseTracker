@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anime Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Anime banner -->
+    <div class="anime-hero" id="animeHero">
+      <!-- small round toggle icon -->
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle theme">
+      </button>
+
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1>Expense Tracker</h1>
+          <p class="tagline">Track your money with your favourite squad.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+      <div class="month-block">
+        <span class="summary-label">Month</span>
+        <div class="month-input-row">
+          <input type="month" id="monthFilter" />
+          <span id="selectedMonthText" class="month-pill">All months</span>
+        </div>
+      </div>
+
+      <div class="total-block">
+        <span class="summary-label">Total Spent</span>
+        <p class="total-amount">₹ <span id="totalAmount">0</span></p>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="expenseForm">
+      <input type="date" id="date" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <input type="text" id="category" placeholder="Category (Food, Travel...)" required />
+      <input type="text" id="note" placeholder="Note (optional)" />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <!-- Expense Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Amount (₹)</th>
+          <th>Category</th>
+          <th>Note</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="expenseTableBody">
+        <!-- rows by JS -->
+      </tbody>
+    </table>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
